@@ -154,3 +154,4 @@ D:\HotelManagment\Hotel.Web\obj\Debug\net8.0\refint\Hotel.Web.dll
 D:\HotelManagment\Hotel.Web\obj\Debug\net8.0\Hotel.Web.pdb
 D:\HotelManagment\Hotel.Web\obj\Debug\net8.0\Hotel.Web.genruntimeconfig.cache
 D:\HotelManagment\Hotel.Web\obj\Debug\net8.0\ref\Hotel.Web.dll
+D:\HotelManagment\Hotel.Web\obj\Debug\net8.0\Hotel.Web.sourcelink.json

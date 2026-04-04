@@ -13,3 +13,4 @@ D:\HotelManagment\Hotel.Services\obj\Debug\net8.0\Hotel.Services.dll
 D:\HotelManagment\Hotel.Services\obj\Debug\net8.0\refint\Hotel.Services.dll
 D:\HotelManagment\Hotel.Services\obj\Debug\net8.0\Hotel.Services.pdb
 D:\HotelManagment\Hotel.Services\obj\Debug\net8.0\ref\Hotel.Services.dll
+D:\HotelManagment\Hotel.Services\obj\Debug\net8.0\Hotel.Services.sourcelink.json
