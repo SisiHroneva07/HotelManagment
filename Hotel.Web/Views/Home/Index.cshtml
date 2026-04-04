@@ -1,0 +1,16 @@
+@{
+    ViewData["Title"] = "Welcome";
+}
+
+<div class="vv-hero">
+    <h1>Velvet &amp; Vine</h1>
+    <p class="lead">A refined hotel reservations experience for staff and administrators. Sign in to manage guests, rooms, and stays.</p>
+    @if (User.Identity?.IsAuthenticated != true)
+    {
+        <a class="btn btn-vv-primary btn-lg mt-2" asp-controller="Account" asp-action="Login">Staff login</a>
+    }
+    else
+    {
+        <a class="btn btn-vv-primary btn-lg mt-2" asp-controller="Reservations" asp-action="Index">Open reservations</a>
+    }
+</div>

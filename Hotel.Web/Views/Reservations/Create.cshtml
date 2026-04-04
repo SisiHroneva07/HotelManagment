@@ -1,0 +1,48 @@
+@model ReservationCreateEditViewModel
+@{
+    ViewData["Title"] = "New reservation";
+}
+<h1 class="vv-page-title">@ViewData["Title"]</h1>
+<div class="vv-card">
+    <form asp-action="Create" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label asp-for="RoomId" class="form-label"></label>
+                <select asp-for="RoomId" class="form-select" asp-items="Model.RoomOptions"></select>
+                <span asp-validation-for="RoomId" class="text-danger"></span>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label asp-for="CheckInDate" class="form-label"></label>
+                <input asp-for="CheckInDate" class="form-control" type="date" />
+                <span asp-validation-for="CheckInDate" class="text-danger"></span>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label asp-for="CheckOutDate" class="form-label"></label>
+                <input asp-for="CheckOutDate" class="form-control" type="date" />
+                <span asp-validation-for="CheckOutDate" class="text-danger"></span>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label asp-for="SelectedClientIds" class="form-label"></label>
+                <select asp-for="SelectedClientIds" class="form-select" asp-items="Model.ClientOptions" multiple size="10"></select>
+                <span asp-validation-for="SelectedClientIds" class="text-danger"></span>
+                <div class="form-text text-vv-muted">Hold Ctrl (Cmd on Mac) to select multiple guests.</div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="form-check mt-4">
+                    <input asp-for="HasBreakfast" class="form-check-input" />
+                    <label asp-for="HasBreakfast" class="form-check-label"></label>
+                </div>
+                <div class="form-check">
+                    <input asp-for="IsAllInclusive" class="form-check-input" />
+                    <label asp-for="IsAllInclusive" class="form-check-label"></label>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-vv-primary">Save</button>
+        <a asp-action="Index" class="btn btn-vv-outline ms-2">Cancel</a>
+    </form>
+</div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

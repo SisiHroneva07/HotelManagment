@@ -1,0 +1,80 @@
+@model StaffUserEditViewModel
+@using Hotel.Web.Authorization
+@{
+    ViewData["Title"] = "Edit staff";
+}
+
+<h1 class="vv-page-title">@ViewData["Title"]</h1>
+<div class="vv-card">
+    <form asp-action="Edit" method="post">
+        <input type="hidden" asp-for="Id" />
+        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label asp-for="UserName" class="form-label"></label>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label asp-for="FirstName" class="form-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label asp-for="MiddleName" class="form-label"></label>
+                <input asp-for="MiddleName" class="form-control" />
+            </div>
+            <div class="col-md-4 mb-3">
+                <label asp-for="LastName" class="form-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label asp-for="EGN" class="form-label"></label>
+                <input asp-for="EGN" class="form-control" maxlength="10" />
+                <span asp-validation-for="EGN" class="text-danger"></span>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label asp-for="PhoneNumber" class="form-label"></label>
+                <input asp-for="PhoneNumber" class="form-control" maxlength="10" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label asp-for="Email" class="form-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label asp-for="HireDate" class="form-label"></label>
+                <input asp-for="HireDate" class="form-control" type="date" />
+            </div>
+            <div class="col-md-6 mb-3">
+                <label asp-for="DismissalDate" class="form-label"></label>
+                <input asp-for="DismissalDate" class="form-control" type="date" />
+            </div>
+            <div class="col-md-6 mb-3 form-check mt-4">
+                <input asp-for="IsActive" class="form-check-input" />
+                <label asp-for="IsActive" class="form-check-label"></label>
+            </div>
+            <div class="col-12 mb-3">
+                <span class="form-label d-block">Roles</span>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="SelectedRoles" value="@HotelRoles.Admin" id="rAdmin"
+                           @(Model.SelectedRoles.Contains(HotelRoles.Admin) ? "checked" : null) />
+                    <label class="form-check-label" for="rAdmin">@HotelRoles.Admin</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="SelectedRoles" value="@HotelRoles.Staff" id="rStaff"
+                           @(Model.SelectedRoles.Contains(HotelRoles.Staff) ? "checked" : null) />
+                    <label class="form-check-label" for="rStaff">@HotelRoles.Staff</label>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-vv-primary">Save</button>
+        <a asp-action="Index" class="btn btn-vv-outline ms-2">Cancel</a>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,177 @@
+/* Velvet & Vine — deep red, cream, gold */
+
+:root {
+    --vv-red: #6b1414;
+    --vv-red-dark: #4a0e0e;
+    --vv-cream: #fdf5e6;
+    --vv-gold: #c9a227;
+    --vv-gold-light: #e8d48a;
+    --vv-text: #2c1810;
+    --vv-muted: #6b5344;
+}
+
+html {
+    font-size: 16px;
+}
+
+body.vv-body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    color: var(--vv-text);
+    background: linear-gradient(165deg, var(--vv-cream) 0%, #f5e6d3 40%, #efe0c8 100%);
+}
+
+.vv-navbar {
+    background: linear-gradient(90deg, var(--vv-red-dark), var(--vv-red));
+    border-bottom: 3px solid var(--vv-gold);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+}
+
+.vv-navbar .navbar-brand {
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--vv-gold-light) !important;
+    font-size: 1.15rem;
+}
+
+.vv-navbar .nav-link {
+    color: var(--vv-cream) !important;
+    font-weight: 500;
+    padding: 0.5rem 0.85rem !important;
+    border-radius: 0.35rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.vv-navbar .nav-link:hover,
+.vv-navbar .nav-link:focus {
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--vv-gold-light) !important;
+}
+
+.vv-navbar .dropdown-menu {
+    background: var(--vv-cream);
+    border: 1px solid var(--vv-gold);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.vv-navbar .dropdown-item {
+    color: var(--vv-red-dark);
+}
+
+.vv-navbar .dropdown-item:hover {
+    background: rgba(201, 162, 39, 0.25);
+    color: var(--vv-red);
+}
+
+.vv-main {
+    flex: 1;
+    padding-bottom: 2rem;
+}
+
+.vv-card {
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(107, 20, 20, 0.2);
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 32px rgba(44, 24, 16, 0.08);
+    padding: 1.5rem;
+}
+
+.vv-page-title {
+    font-weight: 600;
+    color: var(--vv-red);
+    letter-spacing: 0.02em;
+    margin-bottom: 1rem;
+}
+
+.vv-table thead th {
+    background: var(--vv-red);
+    color: var(--vv-cream);
+    border-color: var(--vv-red-dark) !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+}
+
+.vv-table tbody tr:hover {
+    background: rgba(201, 162, 39, 0.12);
+}
+
+.btn-vv-primary {
+    background: linear-gradient(180deg, var(--vv-gold) 0%, #a68520 100%);
+    border: 1px solid var(--vv-red-dark);
+    color: var(--vv-red-dark);
+    font-weight: 600;
+}
+
+.btn-vv-primary:hover {
+    filter: brightness(1.05);
+    color: var(--vv-red-dark);
+}
+
+.btn-vv-outline {
+    border-color: var(--vv-red);
+    color: var(--vv-red);
+    font-weight: 500;
+}
+
+.btn-vv-outline:hover {
+    background: var(--vv-red);
+    color: var(--vv-cream);
+}
+
+.btn-vv-danger {
+    background: var(--vv-red);
+    border-color: var(--vv-red-dark);
+    color: var(--vv-cream);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--vv-gold);
+    box-shadow: 0 0 0 0.2rem rgba(201, 162, 39, 0.35);
+}
+
+.text-vv-muted {
+    color: var(--vv-muted) !important;
+}
+
+.vv-footer {
+    margin-top: auto;
+    padding: 1rem 0;
+    background: rgba(107, 20, 20, 0.06);
+    border-top: 1px solid rgba(107, 20, 20, 0.15);
+    color: var(--vv-muted);
+    font-size: 0.9rem;
+}
+
+.vv-hero {
+    text-align: center;
+    padding: 2.5rem 1rem;
+}
+
+.vv-hero h1 {
+    color: var(--vv-red);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.vv-hero .lead {
+    color: var(--vv-muted);
+    max-width: 36rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.validation-summary-errors {
+    color: var(--vv-red);
+}
+
+.field-validation-error {
+    color: var(--vv-red);
+    font-size: 0.875rem;
+}

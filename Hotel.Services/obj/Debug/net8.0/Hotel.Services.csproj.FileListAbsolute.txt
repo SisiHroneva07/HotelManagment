@@ -1,0 +1,15 @@
+D:\HotelManagment\Hotel.Services\bin\Debug\net8.0\Hotel.Services.deps.json
+D:\HotelManagment\Hotel.Services\bin\Debug\net8.0\Hotel.Services.dll
+D:\HotelManagment\Hotel.Services\bin\Debug\net8.0\Hotel.Services.pdb
+D:\HotelManagment\Hotel.Services\bin\Debug\net8.0\Hotel.Data.dll
+D:\HotelManagment\Hotel.Services\bin\Debug\net8.0\Hotel.Data.pdb
+D:\HotelManagment\Hotel.Services\obj\Debug\net8.0\Hotel.Services.csproj.AssemblyReference.cache
+D:\HotelManagment\Hotel.Services\obj\Debug\net8.0\Hotel.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\HotelManagment\Hotel.Services\obj\Debug\net8.0\Hotel.Services.AssemblyInfoInputs.cache
+D:\HotelManagment\Hotel.Services\obj\Debug\net8.0\Hotel.Services.AssemblyInfo.cs
+D:\HotelManagment\Hotel.Services\obj\Debug\net8.0\Hotel.Services.csproj.CoreCompileInputs.cache
+D:\HotelManagment\Hotel.Services\obj\Debug\net8.0\Hotel.Se.C945381A.Up2Date
+D:\HotelManagment\Hotel.Services\obj\Debug\net8.0\Hotel.Services.dll
+D:\HotelManagment\Hotel.Services\obj\Debug\net8.0\refint\Hotel.Services.dll
+D:\HotelManagment\Hotel.Services\obj\Debug\net8.0\Hotel.Services.pdb
+D:\HotelManagment\Hotel.Services\obj\Debug\net8.0\ref\Hotel.Services.dll

@@ -1,0 +1,45 @@
+@model RoomCreateEditViewModel
+@{
+    ViewData["Title"] = "Add room";
+}
+<h1 class="vv-page-title">@ViewData["Title"]</h1>
+<div class="vv-card">
+    <form asp-action="Create" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <label asp-for="RoomNumber" class="form-label"></label>
+                <input asp-for="RoomNumber" class="form-control" />
+                <span asp-validation-for="RoomNumber" class="text-danger"></span>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label asp-for="Capacity" class="form-label"></label>
+                <input asp-for="Capacity" class="form-control" type="number" />
+                <span asp-validation-for="Capacity" class="text-danger"></span>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label asp-for="Type" class="form-label"></label>
+                <select asp-for="Type" class="form-select" asp-items="@Html.GetEnumSelectList<RoomType>()"></select>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label asp-for="PriceAdult" class="form-label"></label>
+                <input asp-for="PriceAdult" class="form-control" type="number" step="0.01" />
+                <span asp-validation-for="PriceAdult" class="text-danger"></span>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label asp-for="PriceChild" class="form-label"></label>
+                <input asp-for="PriceChild" class="form-control" type="number" step="0.01" />
+                <span asp-validation-for="PriceChild" class="text-danger"></span>
+            </div>
+            <div class="col-12 mb-3 form-check">
+                <input asp-for="IsFree" class="form-check-input" />
+                <label asp-for="IsFree" class="form-check-label"></label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-vv-primary">Save</button>
+        <a asp-action="Index" class="btn btn-vv-outline ms-2">Cancel</a>
+    </form>
+</div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

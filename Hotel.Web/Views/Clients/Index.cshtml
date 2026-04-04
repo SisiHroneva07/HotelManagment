@@ -1,0 +1,62 @@
+@model ClientIndexViewModel
+@{
+    ViewData["Title"] = "Guests";
+}
+
+<h1 class="vv-page-title">Guests</h1>
+<div class="vv-card mb-3">
+    <form method="get" class="row g-2">
+        <div class="col-md-6">
+            <input name="search" value="@Model.Search" class="form-control" placeholder="Name, email, phone" />
+        </div>
+        <div class="col-md-2">
+            <button type="submit" class="btn btn-vv-primary w-100">Search</button>
+        </div>
+    </form>
+</div>
+<p>
+    <a asp-action="Create" class="btn btn-vv-primary">Add guest</a>
+</p>
+<div class="table-responsive vv-card p-0">
+    <table class="table table-striped vv-table mb-0">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Adult</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var c in Model.Clients)
+            {
+                <tr>
+                    <td>@c.FullName</td>
+                    <td>@c.Email</td>
+                    <td>@c.PhoneNumber</td>
+                    <td>@(c.IsAdult ? "Yes" : "No")</td>
+                    <td class="text-nowrap">
+                        <a asp-action="Reservations" asp-route-id="@c.Id" class="btn btn-sm btn-vv-outline">Reservations</a>
+                        <a asp-action="Edit" asp-route-id="@c.Id" class="btn btn-sm btn-vv-outline">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@c.Id" class="btn btn-sm btn-vv-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+@if (Model.Pager.TotalPages > 1)
+{
+    <nav class="mt-3">
+        <ul class="pagination justify-content-center">
+            <li class="page-item @(Model.Pager.HasPrevious ? "" : "disabled")">
+                <a class="page-link" asp-action="Index" asp-route-page="@(Model.Pager.Page - 1)" asp-route-search="@Model.Search">Previous</a>
+            </li>
+            <li class="page-item disabled"><span class="page-link">@Model.Pager.Page / @Model.Pager.TotalPages</span></li>
+            <li class="page-item @(Model.Pager.HasNext ? "" : "disabled")">
+                <a class="page-link" asp-action="Index" asp-route-page="@(Model.Pager.Page + 1)" asp-route-search="@Model.Search">Next</a>
+            </li>
+        </ul>
+    </nav>
+}

@@ -1,0 +1,57 @@
+@model ClientReservationsViewModel
+@{
+    ViewData["Title"] = "Guest reservations";
+}
+<h1 class="vv-page-title">Reservations — @Model.ClientName</h1>
+<div class="vv-card mb-3">
+    <form method="get" class="row g-2 align-items-end">
+        <input type="hidden" name="id" value="@Model.ClientId" />
+        <div class="col-md-4">
+            <label class="form-label">Room</label>
+            <select name="roomId" class="form-select" asp-items="Model.Rooms"></select>
+        </div>
+        <div class="col-md-2">
+            <button type="submit" class="btn btn-vv-primary w-100">Filter</button>
+        </div>
+    </form>
+</div>
+<div class="table-responsive vv-card p-0">
+    <table class="table table-striped vv-table mb-0">
+        <thead>
+            <tr>
+                <th>Room</th>
+                <th>Check-in</th>
+                <th>Check-out</th>
+                <th>Total</th>
+                <th>Staff</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var r in Model.Reservations)
+            {
+                <tr>
+                    <td>@r.RoomNumber</td>
+                    <td>@r.CheckInDate.ToString("d")</td>
+                    <td>@r.CheckOutDate.ToString("d")</td>
+                    <td>@r.TotalAmount.ToString("C")</td>
+                    <td>@r.StaffName</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+@if (Model.Pager.TotalPages > 1)
+{
+    <nav class="mt-3">
+        <ul class="pagination justify-content-center">
+            <li class="page-item @(Model.Pager.HasPrevious ? "" : "disabled")">
+                <a class="page-link" asp-action="Reservations" asp-route-id="@Model.ClientId" asp-route-page="@(Model.Pager.Page - 1)" asp-route-roomId="@Model.RoomFilterId">Previous</a>
+            </li>
+            <li class="page-item disabled"><span class="page-link">@Model.Pager.Page / @Model.Pager.TotalPages</span></li>
+            <li class="page-item @(Model.Pager.HasNext ? "" : "disabled")">
+                <a class="page-link" asp-action="Reservations" asp-route-id="@Model.ClientId" asp-route-page="@(Model.Pager.Page + 1)" asp-route-roomId="@Model.RoomFilterId">Next</a>
+            </li>
+        </ul>
+    </nav>
+}
+<p class="mt-3"><a asp-action="Index" class="btn btn-vv-outline">Back to guests</a></p>

@@ -1,0 +1,42 @@
+@model ClientCreateEditViewModel
+@{
+    ViewData["Title"] = "Edit guest";
+}
+<h1 class="vv-page-title">@ViewData["Title"]</h1>
+<div class="vv-card">
+    <form asp-action="Edit" method="post">
+        <input type="hidden" asp-for="Id" />
+        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label asp-for="FirstName" class="form-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label asp-for="LastName" class="form-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label asp-for="PhoneNumber" class="form-label"></label>
+                <input asp-for="PhoneNumber" class="form-control" maxlength="10" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label asp-for="Email" class="form-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="col-12 mb-3 form-check">
+                <input asp-for="IsAdult" class="form-check-input" />
+                <label asp-for="IsAdult" class="form-check-label"></label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-vv-primary">Save</button>
+        <a asp-action="Index" class="btn btn-vv-outline ms-2">Cancel</a>
+    </form>
+</div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

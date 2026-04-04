@@ -1,0 +1,14 @@
+@model RoomListItemViewModel
+@{
+    ViewData["Title"] = "Delete room";
+}
+<h1 class="vv-page-title">@ViewData["Title"]</h1>
+<div class="vv-card">
+    <p>Remove room <strong>@Model.RoomNumber</strong>?</p>
+    <form asp-action="Delete" method="post">
+        <input type="hidden" name="id" value="@Model.Id" />
+        @Html.AntiForgeryToken()
+        <button type="submit" class="btn btn-vv-danger">Delete</button>
+        <a asp-action="Index" class="btn btn-vv-outline ms-2">Cancel</a>
+    </form>
+</div>
