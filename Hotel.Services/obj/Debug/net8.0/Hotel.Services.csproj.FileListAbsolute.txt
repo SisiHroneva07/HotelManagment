@@ -8,9 +8,9 @@ D:\HotelManagment\Hotel.Services\obj\Debug\net8.0\Hotel.Services.GeneratedMSBuil
 D:\HotelManagment\Hotel.Services\obj\Debug\net8.0\Hotel.Services.AssemblyInfoInputs.cache
 D:\HotelManagment\Hotel.Services\obj\Debug\net8.0\Hotel.Services.AssemblyInfo.cs
 D:\HotelManagment\Hotel.Services\obj\Debug\net8.0\Hotel.Services.csproj.CoreCompileInputs.cache
+D:\HotelManagment\Hotel.Services\obj\Debug\net8.0\Hotel.Services.sourcelink.json
 D:\HotelManagment\Hotel.Services\obj\Debug\net8.0\Hotel.Se.C945381A.Up2Date
 D:\HotelManagment\Hotel.Services\obj\Debug\net8.0\Hotel.Services.dll
 D:\HotelManagment\Hotel.Services\obj\Debug\net8.0\refint\Hotel.Services.dll
 D:\HotelManagment\Hotel.Services\obj\Debug\net8.0\Hotel.Services.pdb
 D:\HotelManagment\Hotel.Services\obj\Debug\net8.0\ref\Hotel.Services.dll
-D:\HotelManagment\Hotel.Services\obj\Debug\net8.0\Hotel.Services.sourcelink.json

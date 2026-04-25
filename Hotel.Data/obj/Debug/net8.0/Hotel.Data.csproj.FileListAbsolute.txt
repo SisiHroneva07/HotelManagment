@@ -7,9 +7,9 @@ D:\HotelManagment\Hotel.Data\obj\Debug\net8.0\Hotel.Data.GeneratedMSBuildEditorC
 D:\HotelManagment\Hotel.Data\obj\Debug\net8.0\Hotel.Data.AssemblyInfoInputs.cache
 D:\HotelManagment\Hotel.Data\obj\Debug\net8.0\Hotel.Data.AssemblyInfo.cs
 D:\HotelManagment\Hotel.Data\obj\Debug\net8.0\Hotel.Data.csproj.CoreCompileInputs.cache
+D:\HotelManagment\Hotel.Data\obj\Debug\net8.0\Hotel.Data.sourcelink.json
 D:\HotelManagment\Hotel.Data\obj\Debug\net8.0\Hotel.Data.dll
 D:\HotelManagment\Hotel.Data\obj\Debug\net8.0\refint\Hotel.Data.dll
 D:\HotelManagment\Hotel.Data\obj\Debug\net8.0\Hotel.Data.pdb
 D:\HotelManagment\Hotel.Data\obj\Debug\net8.0\Hotel.Data.genruntimeconfig.cache
 D:\HotelManagment\Hotel.Data\obj\Debug\net8.0\ref\Hotel.Data.dll
-D:\HotelManagment\Hotel.Data\obj\Debug\net8.0\Hotel.Data.sourcelink.json
